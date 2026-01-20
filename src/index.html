@@ -22,47 +22,6 @@
   </nav>
 </header>
 
-<main>
-  <div class="dropdown">
-  <button class="nav-link dropbtn">Мини-игры ▾</button>
-  <div class="dropdown-content">
-    <a href="#clicker-game">Кликер</a>
-    <a href="#adventure-game">Приключения</a>
-    <a href="#guess-game">Угадай число</a>
-  </div>
-</div>
-
-<section id="clicker-game">
-  <h2> Кликер</h2>
-  <div class="card">
-    <p>Очки: <span id="score">0</span></p>
-    <p>Время: <span id="timer">30</span>с</p>
-    <p>Рекорд: <span id="high-score">0</span></p>
-    <button id="click-btn" class="btn">КЛИК!</button>
-    <button id="reset-clicker" class="btn" style="background:var(--red)">Сброс</button>
-  </div>
-</section>
-
-<section id="adventure-game">
-  <h2> Генератор приключений</h2>
-  <div class="card">
-    <div id="adventure-text">Нажми кнопку, чтобы начать историю...</div>
-    <button id="gen-btn" class="btn">Сгенерировать приключение</button>
-    <div id="history" style="margin-top:20px; font-size: 0.9rem; opacity: 0.7;"></div>
-  </div>
-</section>
-
-<section id="guess-game">
-  <h2> Угадай число (1-100)</h2>
-  <div class="card">
-    <p id="guess-message">Введите число ниже:</p>
-    <p>Попыток осталось: <span id="attempts-left">10</span></p>
-    <input type="number" id="guess-input" placeholder="0-100">
-    <button id="guess-btn" class="btn">Проверить</button>
-    <button id="restart-guess" class="btn" style="display:none">Играть снова</button>
-  </div>
-</section>
-
 <!-- главная -->
 <section id="home" class="hero">
   <div class="hero-text">
@@ -219,7 +178,46 @@
   </form>
   </div>
 </section>
+<main>
+  <div class="dropdown">
+  <button class="nav-link dropbtn">Мини-игры ▾</button>
+  <div class="dropdown-content">
+    <a href="#clicker-game">Кликер</a>
+    <a href="#adventure-game">Приключения</a>
+    <a href="#guess-game">Угадай число</a>
+  </div>
+</div>
 
+<section id="clicker-game">
+  <h2> Кликер</h2>
+  <div class="card">
+    <p>Очки: <span id="score">0</span></p>
+    <p>Время: <span id="timer">30</span>с</p>
+    <p>Рекорд: <span id="high-score">0</span></p>
+    <button id="click-btn" class="btn">КЛИК!</button>
+    <button id="reset-clicker" class="btn" style="background:var(--red)">Сброс</button>
+  </div>
+</section>
+
+<section id="adventure-game">
+  <h2> Генератор приключений</h2>
+  <div class="card">
+    <div id="adventure-text">Нажми кнопку, чтобы начать историю...</div>
+    <button id="gen-btn" class="btn">Сгенерировать приключение</button>
+    <div id="history" style="margin-top:20px; font-size: 0.9rem; opacity: 0.7;"></div>
+  </div>
+</section>
+
+<section id="guess-game">
+  <h2> Угадай число (1-100)</h2>
+  <div class="card">
+    <p id="guess-message">Введите число ниже:</p>
+    <p>Попыток осталось: <span id="attempts-left">10</span></p>
+    <input type="number" id="guess-input" placeholder="0-100">
+    <button id="guess-btn" class="btn">Проверить</button>
+    <button id="restart-guess" class="btn" style="display:none">Играть снова</button>
+  </div>
+</section>
 
 </main>
 
