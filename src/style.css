@@ -193,6 +193,8 @@ footer{
 .dropdown {
   position: relative;
   display: inline-block;
+  padding:120px 8%;
+  min-height:100vh;
 }
 
 .dropdown-content {
@@ -211,18 +213,3 @@ footer{
   display: block;
 }
 
-.dropdown-content a:hover {background-color: var(--red);}
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Игровые элементы */
-#adventure-text {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 20px;
-  min-height: 60px;
-}
-
-#guess-input {
-  width: 100px;
-  margin-bottom: 10px;
-}
