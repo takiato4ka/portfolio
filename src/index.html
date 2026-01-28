@@ -7,222 +7,104 @@
   <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4860/4860886.png">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
 <header>
   <nav class="navbar">
-    <a href="#hero" class="nav-link">Главная</a>
+    <a href="#home" class="nav-link">Главная</a>
     <a href="#skills" class="nav-link">Навыки</a>
+    
     <div class="dropdown">
-      <a href="#games-section" class="nav-link dropbtn">Мини-игры ▾</a>
-      <div class="dropdown-content">
+      <button class="nav-link dropbtn" id="gamesBtn">Мини-игры ▾</button>
+      <div class="dropdown-content" id="gamesMenu">
         <a href="#clicker-game">Кликер</a>
         <a href="#adventure-game">Приключения</a>
         <a href="#guess-game">Угадай число</a>
       </div>
     </div>
+
     <a href="#projects" class="nav-link">Проекты</a>
     <a href="#contacts" class="nav-link">Контакты</a>
   </nav>
 </header>
-  </nav>
-</header>
 
-<!-- главная -->
-<section id="home" class="hero">
-  <div class="hero-text">
-    <h1>Привет, я Тимур </h1>
-    <p>Я начинающий разработчик, изучаю программирование и создаю свои проекты.</p>
-    <p>Интересуюсь разработкой приложений, играми и веб-технологиями.</p>
-    
-    <h3 class="typing">Студент | C++/GO Developer</h3>
-
-    <a href="#contacts" class="btn">Связаться со мной</a>
-  </div>
-
-  <img class="avatar"
-    src="https://i.pinimg.com/736x/fa/5e/1e/fa5e1e7bf338afad527ed0f339b79473.jpg"
-    alt="Аватар разработчика">
-</section>
-
-<!-- Навыки -->
-<section id="skills">
-  <h2>Навыки</h2>
-
-  <h3>Hard Skills</h3>
-
-  <div class="skill">
-    <span>GoLang</span>
-    <div class="bar"><div style="width:65%"></div></div>
-  </div>
-
-  <div class="skill">
-    <span>Java</span>
-    <div class="bar"><div style="width:40%"></div></div>
-  </div>
-
-  <div class="skill">
-    <span>C++</span>
-    <div class="bar"><div style="width:50%"></div></div>
-  </div>
-
-  <h3>Инструменты</h3>
-  <ul>
-    <li>Git</li>
-    <li>MySQL</li>
-    <li>Qt</li>
-    <li>Linux</li>
-  </ul>
-
-  <h3>Soft Skills</h3>
-  <ul>
-    <li>Коммуникабельность</li>
-    <li>Критическое мышление</li>
-  </ul>
-
-  <h3>Языки</h3>
-  <ul>
-    <li>Английский - B2</li>
-    <li>Казахский - родной</li>
-    <li>Японский - N3</li>
-  </ul>
-</section>
-
-<!-- Образование -->
-<section id="education">
-  <h2>Образование</h2>
-
-  <div class="timeline">
-
-    <article>
-      <h4>ToU</h4>
-      <p>Разработка ПО</p>
-      <span>2023 - 2027</span>
-      <p>Изучение C++, GoLang</p>
-    </article>
-    
-    <article>
-      <h4>Sintegrum</h4>
-      <p>WEB</p>
-      <span>2025 - 2026</span>
-      <p>Изучение Python, Lua, JS</p>
-    </article>
-
-    <article>
-      <h4>Школа</h4>
-      <p>Общее образование</p>
-      <span>2012 — 2023</span>
-      <p>Участие в олимпиадах по информатике.</p>
-    </article>
-
-  </div>
-</section>
-
-<!-- Достижения -->
-<section id="achievements">
-  <h2>Достижения</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h4>Хакатон</h4>
-      <p>2023</p>
-      <p>Участие в командной разработке проекта.</p>
-    </div>
-
-    <div class="card">
-      <h4>Сертификат Python</h4>
-      <p>2024</p>
-      <p>Онлайн-курс по Python.</p>
-    </div>
-
-    <div class="card">
-      <h4>Олимпиада</h4>
-      <p>2023</p>
-      <p>Городоская олимпиада по программированию.</p>
-    </div>
-
-    <div class="card">
-      <h4>Работа преподавателем</h4>
-      <p>2025-2026</p>
-      <p>Международная компания STEP IT Academy</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Проекты -->
-<section id="projects">
-  <h2>Проекты</h2>
-
-  <div class="cards">
-
-    <div class="project-card">
-      <h4>ToDo App</h4>
-      <p>Приложение для задач с сохранением данных.</p>
-      <p>Технологии: HTML, CSS, JS</p>
-    </div>
-
-    <div class="project-card">
-      <h4>Проект по контролю качества интернет покрытия</h4>
-      <p>Приложения проверки качества интернет соединения</p>
-      <p>Технологии: С, С#, FastAPI</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Контакты  -->
-<section id="contacts">
-  <h2>Контакты</h2>
-
-  <form id="contactForm">
-    <input type="text" placeholder="Имя" required>
-    <input type="email" placeholder="Email" required>
-    <textarea placeholder="Сообщение" required></textarea>
-    <button type="submit">Отправить</button>
-  </form>
-  </div>
-</section>
 <main>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Привет, я Тимур</h1>
+      <p>Я начинающий разработчик, изучаю программирование и создаю свои проекты.</p>
+      <h3 class="typing">Студент | C++/GO Developer</h3>
+      <br>
+      <a href="#contacts" class="btn">Связаться со мной</a>
+    </div>
+    <img class="avatar" src="https://i.pinimg.com/736x/fa/5e/1e/fa5e1e7bf338afad527ed0f339b79473.jpg" alt="Аватар">
+  </section>
 
-<section id="games-section">
-  <h2>Мини-игры</h2>
-  <div class="games-container">
+  <section id="skills">
+    <h2>Навыки</h2>
+    <h3>Hard Skills</h3>
+    <div class="skill"><span>GoLang</span><div class="bar"><div style="width:65%"></div></div></div>
+    <div class="skill"><span>Java</span><div class="bar"><div style="width:40%"></div></div></div>
+    <div class="skill"><span>C++</span><div class="bar"><div style="width:50%"></div></div></div>
     
-    <div id="clicker-game" class="game-card card">
-      <h3>Кликер</h3>
-      <p>Очки: <span id="score">0</span></p>
-      <p>Время: <span id="timer">30</span>с</p>
-      <p>Рекорд: <span id="high-score">0</span></p>
-      <button id="click-btn" class="btn">КЛИК!</button>
-      <button id="reset-clicker" class="btn" style="background:var(--red)">Сброс</button>
+    <h3>Инструменты</h3>
+    <ul><li>Git</li><li>MySQL</li><li>Qt</li><li>Linux</li></ul>
+  </section>
+
+  <section id="projects">
+    <h2>Проекты</h2>
+    <div class="cards">
+      <div class="project-card">
+        <h4>ToDo App</h4>
+        <p>Технологии: HTML, CSS, JS</p>
+      </div>
+      <div class="project-card">
+        <h4>Контроль покрытия</h4>
+        <p>Технологии: С, С#, FastAPI</p>
+      </div>
     </div>
+  </section>
 
-    <div id="adventure-game" class="game-card card">
-      <h3>Приключения</h3>
-      <div id="adventure-text">Нажми кнопку...</div>
-      <button id="gen-btn" class="btn">Создать</button>
+  <section id="games-section">
+    <h2>Мини-игры</h2>
+    <div class="games-container">
+      <div id="clicker-game" class="game-card card">
+        <h3>Кликер</h3>
+        <p>Очки: <span id="score">0</span> | Рекорд: <span id="high-score">0</span></p>
+        <p>Время: <span id="timer">30</span>с</p>
+        <button id="click-btn" class="btn">КЛИК!</button>
+        <button id="reset-clicker" class="btn" style="background:var(--red)">Сброс</button>
+      </div>
+
+      <div id="adventure-game" class="game-card card">
+        <h3>Приключения</h3>
+        <div id="adventure-text" style="min-height:60px; margin-bottom:10px; border:1px dashed #000; padding:5px;">Нажми кнопку...</div>
+        <button id="gen-btn" class="btn">Сгенерировать</button>
+      </div>
+
+      <div id="guess-game" class="game-card card">
+        <h3>Угадай число</h3>
+        <p id="guess-message">Введите число (1-100):</p>
+        <p>Попыток: <span id="attempts-left">10</span></p>
+        <input type="number" id="guess-input" style="width: 100%; padding: 10px; margin-bottom: 10px; border:3px solid #000;">
+        <button id="guess-btn" class="btn">ОК</button>
+        <button id="restart-guess" class="btn" style="display:none">Заново</button>
+      </div>
     </div>
+  </section>
 
-    <div id="guess-game" class="game-card card">
-      <h3>Угадай число</h3>
-      <p id="guess-message">Введите число (1-100):</p>
-      <p>Попыток: <span id="attempts-left">10</span></p>
-      <input type="number" id="guess-input" style="width: 80px;">
-      <button id="guess-btn" class="btn">ОК</button>
-      <button id="restart-guess" class="btn" style="display:none">Заново</button>
-    </div>
-
-  </div>
-</section>
-
+  <section id="contacts">
+    <h2>Контакты</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Имя" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Сообщение" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+  </section>
 </main>
 
-<footer>
-  <p>© 2026 Тимур</p>
-</footer>
+<footer><p>© 2026 Тимур</p></footer>
 
 <script src="script.js"></script>
 </body>
