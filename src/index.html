@@ -18,6 +18,9 @@
       <button class="nav-link dropbtn" id="gamesBtn">Мини-игры ▾</button>
       <div class="dropdown-content" id="gamesMenu">
         <a href="#clicker-game">Кликер</a>
+        <a href="#reaction-game">Реакция</a>
+        <a href="#tic-tac-toe">Крестики-нолики</a>
+        <a href="#maze-game">Лабиринт</a>
         <a href="#adventure-game">Приключения</a>
         <a href="#guess-game">Угадай число</a>
       </div>
@@ -33,6 +36,7 @@
     <div class="hero-text">
       <h1>Привет, я Тимур</h1>
       <p>Я начинающий разработчик, изучаю программирование и создаю свои проекты.</p>
+      <p>Интересуюсь разработкой приложений, играми и веб-технологиями.</p>
       <h3 class="typing">Студент | C++/GO Developer</h3>
       <br>
       <a href="#contacts" class="btn">Связаться со мной</a>
@@ -42,13 +46,17 @@
 
   <section id="skills">
     <h2>Навыки</h2>
-    <h3>Hard Skills</h3>
     <div class="skill"><span>GoLang</span><div class="bar"><div style="width:65%"></div></div></div>
     <div class="skill"><span>Java</span><div class="bar"><div style="width:40%"></div></div></div>
     <div class="skill"><span>C++</span><div class="bar"><div style="width:50%"></div></div></div>
-    
+    <br>
     <h3>Инструменты</h3>
-    <ul><li>Git</li><li>MySQL</li><li>Qt</li><li>Linux</li></ul>
+    <ul>
+        <li>Git</li>
+        <li>MySQL</li>
+        <li>Qt</li>
+        <li>Linux</li>
+    </ul>
   </section>
 
   <section id="projects">
@@ -59,7 +67,7 @@
         <p>Технологии: HTML, CSS, JS</p>
       </div>
       <div class="project-card">
-        <h4>Контроль покрытия</h4>
+        <h4>Интернет покрытие</h4>
         <p>Технологии: С, С#, FastAPI</p>
       </div>
     </div>
@@ -71,40 +79,73 @@
       <div id="clicker-game" class="game-card card">
         <h3>Кликер</h3>
         <p>Очки: <span id="score">0</span> | Рекорд: <span id="high-score">0</span></p>
-        <p>Время: <span id="timer">30</span>с</p>
+        <p>Время: <span id="timer-val">30</span>с</p>
         <button id="click-btn" class="btn">КЛИК!</button>
         <button id="reset-clicker" class="btn" style="background:var(--red)">Сброс</button>
       </div>
 
+      <div id="reaction-game" class="game-card card">
+        <h3>Реакция</h3>
+        <p>Хиты: <span id="react-score">0</span> | Ср. время: <span id="react-avg">0</span>мс</p>
+        <div id="react-area" style="height:150px; position:relative; background:#eee; border:3px solid black; margin:10px 0; overflow:hidden;">
+            <button id="react-target" class="btn" style="display:none; position:absolute; margin:0; padding:5px 10px; min-width:auto;">ЖМИ!</button>
+        </div>
+        <button id="start-react" class="btn">Старт (30с)</button>
+      </div>
+
+      <div id="tic-tac-toe" class="game-card card">
+        <h3>Крестики-нолики</h3>
+        <p id="ttt-status">Ход: X</p>
+        <div class="ttt-grid" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:5px; margin:10px 0;">
+            <div class="cell" data-index="0" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="1" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="2" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="3" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="4" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="5" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="6" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="7" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+            <div class="cell" data-index="8" style="height:50px; border:2px solid black; display:flex; align-items:center; justify-content:center; font-weight:800; cursor:pointer; background:white;"></div>
+        </div>
+        <button id="reset-ttt" class="btn">Сброс</button>
+      </div>
+
+      <div id="maze-game" class="game-card card">
+        <h3>Лабиринт</h3>
+        <p>Время: <span id="maze-timer">0</span>с</p>
+        <div id="maze-container" style="display:grid; grid-template-columns:repeat(10, 1fr); gap:1px; background:black; border:2px solid black; margin:10px 0;"></div>
+        <button id="reset-maze" class="btn">Заново</button>
+      </div>
+
       <div id="adventure-game" class="game-card card">
         <h3>Приключения</h3>
-        <div id="adventure-text" style="min-height:60px; margin-bottom:10px; border:1px dashed #000; padding:5px;">Нажми кнопку...</div>
-        <button id="gen-btn" class="btn">Сгенерировать</button>
+        <div id="adventure-text" style="min-height: 80px; margin-bottom: 15px; font-size: 0.9rem; border: 1px dashed black; padding: 5px;">Нажми кнопку...</div>
+        <button id="gen-btn" class="btn">Создать</button>
       </div>
 
       <div id="guess-game" class="game-card card">
         <h3>Угадай число</h3>
         <p id="guess-message">Введите число (1-100):</p>
-        <p>Попыток: <span id="attempts-left">10</span></p>
-        <input type="number" id="guess-input" style="width: 100%; padding: 10px; margin-bottom: 10px; border:3px solid #000;">
+        <input type="number" id="guess-input" style="width:100%; border:3px solid black; padding:5px;">
         <button id="guess-btn" class="btn">ОК</button>
-        <button id="restart-guess" class="btn" style="display:none">Заново</button>
       </div>
     </div>
   </section>
 
   <section id="contacts">
     <h2>Контакты</h2>
-    <form id="contactForm">
+    <form>
       <input type="text" placeholder="Имя" required>
       <input type="email" placeholder="Email" required>
       <textarea placeholder="Сообщение" required></textarea>
-      <button type="submit">Отправить</button>
+      <button type="submit" class="btn">Отправить</button>
     </form>
   </section>
 </main>
 
-<footer><p>© 2026 Тимур</p></footer>
+<footer>
+  <p>© 2026 Тимур</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
