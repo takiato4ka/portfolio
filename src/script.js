@@ -73,6 +73,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     window.addEventListener('keydown', (e) => {
+        if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].includes(e.key)){
+            e.preventDefault();
+        }
         let n = p;
         if(e.key === "ArrowUp") n -= 10; if(e.key === "ArrowDown") n += 10;
         if(e.key === "ArrowLeft") n -= 1; if(e.key === "ArrowRight") n += 1;
