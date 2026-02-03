@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if(document.getElementById('reset-clicker')) document.getElementById('reset-clicker').onclick = () => location.reload();
 
-    // 3. РЕАКЦИЯ (кратко, без изменений твоей логики)
+    // 3. РЕАКЦИЯ 
     let rHits = 0, rTime = 0, rStart, rLeft = 30, rInterval;
     const rTarget = document.getElementById('react-target');
     if(document.getElementById('start-react')) {
