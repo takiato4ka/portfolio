@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
-    // --- ЛОГИКА RPG (ЗАДАНИЕ 4 + ТВОИ ПРАВКИ) ---
+    // --- ЛОГИКА RPG ---
     let rpg = JSON.parse(localStorage.getItem('rpg_v3')) || { lvl: 1, xp: 0, habits: [], dailies: [], quests: [] };
 
     const save = () => localStorage.setItem('rpg_v3', JSON.stringify(rpg));
