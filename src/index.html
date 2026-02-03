@@ -26,6 +26,7 @@
       </div>
     </div>
 
+    <a href="#rpg-planner" class="nav-link">RPG Планировщик</a>
     <a href="#projects" class="nav-link">Проекты</a>
     <a href="#contacts" class="nav-link">Контакты</a>
   </nav>
@@ -132,6 +133,53 @@
     </div>
   </section>
 
+ <section id="rpg-planner">
+  <h2>RPG Планировщик</h2>
+  
+  <div class="card" style="margin-bottom:20px; display:flex; gap:20px; align-items:center;">
+      <img src="https://i.pinimg.com/736x/fa/5e/1e/fa5e1e7bf338afad527ed0f339b79473.jpg" style="width:70px; border:4px solid black;">
+      <div style="flex-grow:1;">
+          <h3 style="margin:0;">Тимур Шакимов</h3>
+          <p style="margin:5px 0; font-weight:800;">Уровень: <span id="rpg-lvl">1</span></p>
+          <div class="bar"><div id="rpg-xp-fill" style="width:0%; background:black; transition: 0.3s;"></div></div>
+          <small style="font-weight:800;">Опыт: <span id="rpg-xp-cur">0</span> / <span id="rpg-xp-need">100</span> XP</small>
+      </div>
+  </div>
+  
+  <div class="card" style="margin-bottom:20px;">
+      <h3>Добавить задачу</h3>
+      <input type="text" id="rpg-task-in" placeholder="Название задачи...">
+      <div style="display:flex; gap:10px; margin-bottom:10px;">
+        <select id="rpg-type-in" style="flex:1; padding:10px; border:3px solid black; font-weight:600; background:white;">
+            <option value="habit">Привычка</option>
+            <option value="daily">Ежедневное дело</option>
+            <option value="quest">Квест (разово)</option>
+        </select>
+        <select id="rpg-diff-in" style="flex:1; padding:10px; border:3px solid black; font-weight:600; background:white;">
+            <option value="10">Легко (+10 XP)</option>
+            <option value="25">Средне (+25 XP)</option>
+            <option value="50">Сложно (+50 XP)</option>
+        </select>
+      </div>
+      <button id="rpg-add-btn" class="btn" style="width:100%;">Добавить в список</button>
+      <button id="rpg-reset-btn" class="btn" style="background:var(--red); font-size:10px; padding:5px 10px; margin-top:10px;">Сбросить весь прогресс</button>
+  </div>
+
+  <div class="games-container" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+      <div class="card">
+          <h3>Привычки</h3>
+          <div id="rpg-habits-list"></div>
+      </div>
+      <div class="card">
+          <h3>Ежедневные</h3>
+          <div id="rpg-dailies-list"></div>
+      </div>
+      <div class="card">
+          <h3>Квесты</h3>
+          <div id="rpg-quests-list"></div>
+      </div>
+  </div>
+</section>
   <section id="contacts">
     <h2>Контакты</h2>
     <form>
